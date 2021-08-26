@@ -2,14 +2,25 @@
   import Card from "./components/card/Card";
 import Drawer from "./components/drawer/Drawer";
   import Header from "./components/header/Header";
+
+
+  const arr = [
+    {
+      name: 'Мужские Кроссовки Nike Air Max 270',
+      price: 12999
+    },
+    {
+      name: 'Мужские Кроссовки Nike Air Blazer 350',
+      price: 16500
+    }
+  ]
   
   function App() {
   return (
     <div className="wrapper clear">
       
    <Drawer />
-
-    <Header />
+   <Header />
      
       <main className="content p-40">
         <div className="d-flex align-center justify-between mb-40">
@@ -22,9 +33,10 @@ import Drawer from "./components/drawer/Drawer";
   
 
       <div className="d-flex">
-    <Card />
-   
-      
+   {
+     arr.map(obj => <Card />)
+   }
+     
    
       </div>
  
